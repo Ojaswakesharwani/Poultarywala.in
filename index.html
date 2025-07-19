@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>पोल्ट्रीवाला - चूजा ट्रेडिंग</title>
+  <link rel="stylesheet" href="src/style/style.css" />
+  <link rel="icon" type="image/png" href="src/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yU+jlf2LZIkz0+yCTaVx0cq+5zB4u2z6lLK3mWgN4vXHfF4h0UNfgArzvql7dVDC+piEwY4hspLUo3FlbNfbAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="src/img/Fevicon.png" alt="Logo">
+      <p>पोल्ट्रीवाला</p>
+    </div>
+    <!-- <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Product</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+    </nav> -->
+    <div class="contact-us">
+      <a href="#quote" class="btn-contact">Contact Us</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>ब्रायलर मुर्गी खरीदना अब होगा आसान<br><span>तेज़ और भरोसेमंद!</span></h1>
+      <p>अब जुड़िए पोल्ट्रीवाला के साथ – भारत का पहला ऑनलाइन पोल्ट्री मार्केट.</p>
+      <a href="#quote" class="btn">Contact Us</a>
+    </div>
+
+    <!-- Category section inside hero -->
+    <div class="category-section">
+      <h2>हमारी सर्विस कैटेगरी</h2>
+      <div class="categories">
+        <div class="category-card ">
+          <p>डेली ब्रायलर लिफ्टिंग <br>रेट</p>
+        </div>
+        <div class="category-card">
+          <p>100% भरोसेमंद कंपनियां और फार्मर्स</p>
+        </div>
+        <div class="category-card">
+          <p>नजदीकी फार्म से सीधी <br>डिलीवरी</p>
+        </div>
+        <div class="category-card">
+          <p>कई कंपनियों से ऑर्डर करने की आज़ादी</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ✅ QUOTE FORM SECTION -->
+  <section class="quote-section" id="quote">
+    <form class="quote-form" action="https://sheetdb.io/api/v1/qoqokjyf6djct" method="post" onsubmit="return showPopup(event)">
+  <h2>अपना कोटेशन अभी प्राप्त करें</h2>
+  <p>हम 24 घंटे के अंदर संपर्क करेंगे</p>
+
+  <div class="form-grid">
+    <input type="text" name="DATA[name]" placeholder="आपका नाम" required />
+    <input type="text" name="DATA[trading]" placeholder="ट्रेडिंग का नाम" required />
+    <input type="text" name="DATA[phone]" placeholder="मोबाइल नंबर" required />
+    <input type="text" name="DATA[city]" placeholder="शहर" required />
+    <input type="text" name="DATA[district]" placeholder="जिला" required />
+    <select name="DATA[purchase]" required>
+      <option value="">डेली कितना किलो मुर्गी खरीदते हैं</option>
+      <option>500 - 1000 किलो</option>
+      <option>1000 - 1500 किलो</option>
+      <option>1500 - 2000 किलो</option>
+      <option>2500 - 3000 किलो</option>
+      <option>3500 - 4000 किलो</option>
+    </select>
+  </div>
+
+  <button type="submit">🚀 कोटेशन सबमिट करें</button>
+</form>
+  </section>
+
+  <div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p>✅ आपका फॉर्म सफलतापूर्वक सबमिट हो गया है!</p>
+  </div>
+</div>
+  <a href="https://wa.me/919834512510" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+  <!-- 🔹 Simple 2-Line Green Header -->
+<footer class="site-footer">
+  <div class="footer-contact">
+    <!-- <p><i class="fa-solid fa-envelope"></i></i> WhatsApp: <a href="https://wa.me/919999999999" target="_blank">+91 99999 99999</a></p> -->
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@poultrywala.com">info@poultrywala.com</a></p>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Poultrywala. All rights reserved.</p>
+    
+  </div>
+</footer>
+
+
+  <!-- <script src="src/js/submit.js"></script> -->
+</body>
+
+
+<script>
+  function showPopup(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = event.target;
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("popup").style.display = "block";
+        form.reset(); // Clear form
+      } else {
+        alert("❌ सबमिट करने में त्रुटि हुई। कृपया दोबारा प्रयास करें।");
+      }
+    })
+    .catch(error => {
+      alert("❌ नेटवर्क त्रुटि! कृपया दोबारा प्रयास करें।");
+    });
+
+    return false; // Prevent default
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</html>
