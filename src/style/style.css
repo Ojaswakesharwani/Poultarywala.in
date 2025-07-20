@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Noto Sans Devanagari', sans-serif; /* Hindi font */
+  }
+
+  .logo img {
+    width: 40px; /* Adjust as needed */
+    height: 40px;
+  }
+
+  .logo p {
+    font-weight: bold;
+    font-size: 28px;
+    color: #4C8C24; /* Green like the logo */
+    margin: 0;
+  }
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #4C8C24;
+}
+
+.icons img {
+  height: 24px;
+  margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(#4c8c24f1, #4c8c24d0), url('../img/hero-bg.jpg') center center/cover no-repeat;
+ }
+ 
+
+.hero {
+   padding-top: 140px;
+   padding-bottom: 80px;
+  
+  
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+.hero-text span {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.hero-text p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #4C8C24;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10PX;
+  box-shadow: black;
+}
+
+.category-section {
+  margin-top: 40px;
+}
+
+.category-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.category-card {
+  background: #ffd700;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px #FFD700;
+}
+
+.category-card.active {
+  border: 2px solid #FFD700;
+}
+
+
+.contact-us .btn-contact {
+  background-color: #2c7a3f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.contact-us .btn-contact:hover {
+  background-color: #246333;
+}
+
+/* Category Section */
+
+/* ✅ Quote Section */
+.quote-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+
+
+  
+}
+
+.quote-form h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.quote-form p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #fdfdfd;
+}
+
+textarea {
+  height: 120px;
+  margin-top: 1rem;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #3da500;
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+  align-items: center;
+  width: 100%;
+  
+}
+
+button[type="submit"]:hover {
+  background-color: #2e8700;
+  border: #25d366;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .quote-form {
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+.site-footer {
+  background-color: #4c8c24; /* green */
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-contact p,
+.footer-bottom p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-contact i,
+.footer-bottom i {
+  margin-right: 6px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5b;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfect center */
+  
+  background-color: #fff;
+  padding: 30px 20px;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.popup-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.popup-content h2 {
+  font-size: 20px;
+  color: #28a745;
+  margin-bottom: 12px;
+}
+
+.popup-content p {
+  font-size: 16px;
+  color: #444;
+  margin: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
